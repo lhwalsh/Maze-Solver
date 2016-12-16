@@ -8,6 +8,14 @@ public class Maze {
 	maze = new char[length][length];
     }
 
+    public int getLength() {
+	return length;
+    }
+
+    public void set(int x, int y, char z) {
+	maze[x][y] = z;
+    }
+
     public String toString() {
 	String answer = "";
 	int x = 0;

@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Driver {
-	public static void main(String args[]) {
+	public static void main(String args[]) throws Exception {
 		System.out.println( "Word Brain Solver" );
 		System.out.print( "Enter size of maze: " );
 		Scanner input = new Scanner( System.in );
@@ -12,7 +12,7 @@ public class Driver {
 		getMaze( maze );
 	}
 
-	public static void getMaze( Maze maze ) {
+	public static void getMaze( Maze maze ) throws Exception {
 		char input = '\0'; // Initialize as null
 
 		for ( int i = 0; i < maze.getLength(); i++ ) {
