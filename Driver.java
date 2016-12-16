@@ -28,6 +28,10 @@ public class Driver {
 				maze.set( i, j, input );
 			}
 		}
+
+		System.out.print(String.format("\033[H\033[2J")); // Clears screen
+		System.out.println( maze );
+
 	}
 }
 
