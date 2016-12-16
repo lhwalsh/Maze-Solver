@@ -22,9 +22,15 @@ public class Driver {
 			for ( int j = 0; j < maze.getLength(); j++ ) {
 				System.out.print(String.format("\033[H\033[2J")); // Clears screen
 
+				maze.set( i, j, '*' );
 				System.out.println( maze );
 				System.out.print( "Enter next char( press enter if empty ): " );
-				input = reader.nextLine().charAt( 0 );
+				String tmpString = reader.nextLine();
+				if ( tmpString.isEmpty() ) {
+					input = ' ';
+				} else {
+					input = tmpString.charAt( 0 );
+				}
 				maze.set( i, j, input );
 			}
 		}
