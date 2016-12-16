@@ -1,34 +1,41 @@
-import java.util.Scanner;
 public class Maze {
 
     private int length;
+    private char[][] maze;
 
-    public Maze() {
-	Scanner user = new Scanner(System.in);
-	System.out.println("Please enter the length of the puzzle: ");
-	length = user.nextInt();
-	System.out.println(length);
-	
+    public Maze(int length) {
+	this.length = length;
+	maze = new char[length][length];
     }
 
     public String toString() {
+	String answer = "";
+	int x = 0;
+	int y = 0;
 	for (int i = 0; i < length*2+1; i++) {
-	    System.out.print("*");
-	}
-	System.out.println();
-	for (int i = 0; i < length; i++) {
-	    for (int j = 0; j < length*2+1; i++) {
-		if (i%2 == 0) {
-		    System.out.print("*");
-		} else {
-		    System.out.print(" ");
+	    if (i%2 == 0) {
+		for (int j = 0; j < length*2+1; j++) {
+		    answer += "-";
 		}
+	    } else {
+		for (int j = 0; j < length*2+1; j++) {
+		    if (j%2 == 0) {
+			answer += "|";
+		    } else {
+		        if (maze[x][y] == 0) {
+			    answer += " ";
+			} else {
+			    answer += maze[x][y];
+			}
+			y++;
+		    }
+		}
+		x++;
 	    }
+	    y = 0;
+	    answer += "\n";
 	}
-	System.out.println();
-	for (int i = 0; i < length*2+1; i++) {
-	    System.out.print("*");
-	}
+	return answer;
     }
 
 }
