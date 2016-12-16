@@ -13,7 +13,7 @@ public class Driver {
 	}
 
 	public static void getMaze( Maze maze ) throws Exception {
-		char input = '\0'; // Initialize as null
+		char input = 0; // Initialize as null
 
 		for ( int i = 0; i < maze.getLength(); i++ ) {
 			for ( int j = 0; j < maze.getLength(); j++ ) {
