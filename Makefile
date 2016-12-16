@@ -1,5 +1,5 @@
 MAIN = Driver
-FILES = $(MAIN).java Maze.java Solver.java Dictionary.java
+FILES = $(MAIN).java Maze.java Solver.java WordBank.java
 
 Driver.class : $(FILES)
 	@echo -n Compiling project... 
