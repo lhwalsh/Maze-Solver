@@ -12,6 +12,11 @@ public class Driver {
 		Maze maze = new Maze( size );
 
 		getMaze( maze );
+
+		System.out.print( "Enter size of word: " );
+		int wordSize = input.nextInt();
+
+
 	}
 
 	public static void getMaze( Maze maze ) throws Exception {
@@ -27,9 +32,9 @@ public class Driver {
 				System.out.print( "Enter next char( press enter if empty ): " );
 				String tmpString = reader.nextLine();
 				if ( tmpString.isEmpty() ) {
-					input = ' ';
+					input = 0;
 				} else {
-					input = tmpString.charAt( 0 );
+					input = tmpString.toUpperCase().charAt( 0 );
 				}
 				maze.set( i, j, input );
 			}
