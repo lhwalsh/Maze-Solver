@@ -9,7 +9,6 @@ Driver.class : $(FILES)
 run :
 	@echo -n -e Executing program...\n
 	@java $(MAIN)
-	@echo -n -e \nFinished\n
 
 clean :
 	@echo -n Cleaning...

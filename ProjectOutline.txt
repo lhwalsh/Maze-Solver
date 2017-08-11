@@ -6,12 +6,12 @@ User Input:
     size of word
 
 Data Structures:
-    2d Array or graph
+    2d Array of nodes that hold a char and boolean
     Hash Map Database (possible)
 
 Algorithms
     Pathing algorithm
-    Check with database
+    Check with database (probably binary search)
 
 Order of Code:
     User Input
@@ -22,6 +22,15 @@ Order of Code:
     Print list of words
     Repeat
 
-Side Notes:
+Future Goals:
     Make it learn as words are used, put more emphasis on the words that have
     been used before
+
+    Fully solve the puzzle instead of just finding one word
+
+Unsolved Methods:
+    goBackOne()	//Doesn't unmark anything but changes position and tempWord.
+		//
+    next()
+    testWords()
+    findParents()
